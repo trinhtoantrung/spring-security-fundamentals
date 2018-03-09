@@ -2,7 +2,7 @@
 <html lang="en">
   
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +43,7 @@
       <div class="hero-unit">
         <div>
           <h1>
-            Welcome to Fitness Tracker!
+            Welcome to Fitness Tracker - Trung!
           </h1>
           <p>
             To get started, we need to enter a goal for what we want to exercise for
@@ -51,11 +51,11 @@
           </p>
         </div>
         <a class="btn btn-primary" href="addGoal.html">
-          Add Goal »
+          Add Goal
         </a>
         
         <a class="btn btn-primary" href="addMinutes.html">
-          Add Exercise Minutes »
+          Add Exercise Minutes
         </a>
       </div>
       <div>
