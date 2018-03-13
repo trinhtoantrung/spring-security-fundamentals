@@ -11,9 +11,17 @@
 
     <security:authentication-manager>
         <security:authentication-provider>
-            <security:user-service>
-                <security:user name="trung" password="123" authorities="ROLE_USER"/>
-            </security:user-service>
+            <!--<security:user-service>-->
+                <!--<security:user name="trung" password="123" authorities="ROLE_USER"/>-->
+            <!--</security:user-service>-->
+            <security:jdbc-user-service data-source-ref="securityDataSource"/>
         </security:authentication-provider>
     </security:authentication-manager>
+
+    <bean id="securityDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/fitnesstracker"/>
+        <property name="username" value="root"/>
+        <property name="password" value="password"/>
+    </bean>
 </beans>
