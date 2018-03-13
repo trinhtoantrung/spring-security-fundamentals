@@ -18,6 +18,7 @@ insert into authorities(username, authority) values ("bryan", "ROLE_USER");
 
 insert into users(username, password, enabled) values ("admin", "secret", true);
 insert into authorities(username, authority) values ("admin", "ROLE_ADMIN");
+insert into authorities(username, authority) values ("admin", "ROLE_USER");
 
 select * from users;
 select * from authorities;
