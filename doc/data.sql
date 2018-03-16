@@ -22,3 +22,5 @@ insert into authorities(username, authority) values ("admin", "ROLE_USER");
 
 select * from users;
 select * from authorities;
+
+update users set password = "5ebe2294ecd0e0f08eab7690d2a6ee69" where username = "bryan";
