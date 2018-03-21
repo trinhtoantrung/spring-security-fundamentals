@@ -14,7 +14,7 @@
             <!--<security:user-service>-->
                 <!--<security:user name="trung" password="123" authorities="ROLE_USER"/>-->
             <!--</security:user-service>-->
-            <security:password-encoder hash="md5"/>
+            <security:password-encoder hash="bcrypt"/>
             <security:jdbc-user-service data-source-ref="securityDataSource"/>
         </security:authentication-provider>
     </security:authentication-manager>
