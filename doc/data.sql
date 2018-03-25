@@ -24,3 +24,6 @@ select * from users;
 select * from authorities;
 
 update users set password = "5ebe2294ecd0e0f08eab7690d2a6ee69" where username = "bryan";
+
+insert into users(username, password, enabled) values ("mark", "$2a$10$xnuScVs4mSJDdbl4C0KRn.Ly0OGwLF4sseuLH7Qls.7qQQ1w7s.1K", true);
+insert into authorities(username, authority) values ("mark", "ROLE_BAD");

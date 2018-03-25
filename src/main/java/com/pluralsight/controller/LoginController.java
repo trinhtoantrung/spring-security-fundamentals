@@ -19,5 +19,17 @@ public class LoginController {
         model.addAttribute("error", "true");
         return "login";
     }
+
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logout(ModelMap model) {
+        System.out.println("In logout controller");
+        return "logout";
+    }
+
+    @RequestMapping(value = "/403", method = RequestMethod.GET)
+    public String error403(ModelMap model) {
+        System.out.println("In 403 controller");
+        return "403";
+    }
 }
 
