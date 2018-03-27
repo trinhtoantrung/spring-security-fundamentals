@@ -27,3 +27,18 @@ update users set password = "5ebe2294ecd0e0f08eab7690d2a6ee69" where username = 
 
 insert into users(username, password, enabled) values ("mark", "$2a$10$xnuScVs4mSJDdbl4C0KRn.Ly0OGwLF4sseuLH7Qls.7qQQ1w7s.1K", true);
 insert into authorities(username, authority) values ("mark", "ROLE_BAD");
+
+create table permissions (
+	username varchar(50) not null,
+    target varchar(50) not null,
+    permission varchar(50) not null,
+    constraint fk_permissions_users foreign key(username) references users(username)
+);
+
+create index ix_perm_username on permissions(username, target, permission);
+
+insert into permissions(username, target, permission) values ("admin", "com.pluralsight.model.Goal", "createGoal");
+
+select * from permissions;
+
+delete from permissions where username = 'admin';
